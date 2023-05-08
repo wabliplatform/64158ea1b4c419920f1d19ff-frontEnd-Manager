@@ -1,0 +1,3 @@
+let apiEmployeeApi = new TempApi.EmployeeApi();import TempApi from '../src/index';let employee = new TempApi.Employee();document.getElementById('ib116').onclick = (event) => {
+    event.preventDefault();
+    employee['employeeName'] = document.querySelector("[annotationname = 'employeeName']").value;apiEmployeeApi.createemployee( employee, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {   location.href= '/Home' ;}}});};window.onload = () => {};
