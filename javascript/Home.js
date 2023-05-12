@@ -1,4 +1,8 @@
-let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';document.getElementById('iitjmd').onclick = (event) => {
+let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';document.getElementById('iyj6').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/Home' ;}};document.getElementById('i570wi').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/addEmployee' ;}};document.getElementById('iitjmd').onclick = (event) => {
     event.preventDefault();
     {   location.href= '/addEmployee' ;}};document.getElementById('iure3l').onclick = (event) => {
     event.preventDefault();
@@ -192,6 +196,101 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
           parentId = key;
         }
       });
+     location.href= '/updateTask/' + transitionId;}};document.getElementById('ib0zj').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("ib0zj")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/updateTask/' + transitionId;}};document.getElementById('itlyy').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("itlyy")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/updateTask/' + transitionId;}};document.getElementById('ilpr6').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("ilpr6")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/updateTask/' + transitionId;}};document.getElementById('i1tu18').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("i1tu18")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/updateTask/' + transitionId;}};document.getElementById('ih6ddi').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("ih6ddi")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
      location.href= '/updateTask/' + transitionId;}};window.onload = () => {const attributetodoTasks = "taskStatus"; 
             const valuetodoTasks = "Todo";apiTaskApi.getByParamstask( attributetodoTasks,  valuetodoTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("icfzop").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
@@ -328,8 +427,8 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
     );
     
     
-    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});const attributedoneTasks = "taskStatus"; 
-            const valuedoneTasks = "Done";apiTaskApi.getByParamstask( attributedoneTasks,  valuedoneTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("iswi3t").querySelectorAll( "[dataitem='true']" )].filter(
+    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});const attributetodoTasks = "taskStatus"; 
+            const valuetodoTasks = "Todo";apiTaskApi.getByParamstask( attributetodoTasks,  valuetodoTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i3bnj").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();  data.forEach((item,i) => {
