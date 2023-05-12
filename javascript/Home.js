@@ -427,8 +427,8 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
     );
     
     
-    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});const attributetodoTasks = "taskStatus"; 
-            const valuetodoTasks = "Todo";apiTaskApi.getByParamstask( attributetodoTasks,  valuetodoTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i3bnj").querySelectorAll( "[dataitem='true']" )].filter(
+    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});const attributedoneTasks = "taskStatus"; 
+            const valuedoneTasks = "Done";apiTaskApi.getByParamstask( attributedoneTasks,  valuedoneTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i3bnj").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();  data.forEach((item,i) => {
