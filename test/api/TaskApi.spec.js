@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('getByParamstask', function() {
+      it('should call getByParamstask successfully', function(done) {
+        //uncomment below and update the code to test getByParamstask
+        //instance.getByParamstask(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('gettask', function() {
       it('should call gettask successfully', function(done) {
         //uncomment below and update the code to test gettask

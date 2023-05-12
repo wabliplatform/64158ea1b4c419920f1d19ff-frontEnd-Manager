@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**createtask**](TaskApi.md#createtask) | **POST** /task | Creates the data
 [**deletetask**](TaskApi.md#deletetask) | **DELETE** /task/{taskId} | Delete the element
 [**getAlltask**](TaskApi.md#getAlltask) | **GET** /task/getAll | Get all the data
+[**getByParamstask**](TaskApi.md#getByParamstask) | **GET** /task/getByParams/{attribute}/{value} | Get all the data based on user query
 [**gettask**](TaskApi.md#gettask) | **GET** /task/{taskId} | Get the element
 [**updatetask**](TaskApi.md#updatetask) | **PUT** /task/{taskId} | Updates the element
 
@@ -122,6 +123,51 @@ apiInstance.getAlltask((error, data, response) => {
 ### Parameters
 
 This endpoint does not need any parameter.
+
+### Return type
+
+[**[Task]**](Task.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getByParamstask
+
+> [Task] getByParamstask(attribute, value)
+
+Get all the data based on user query
+
+### Example
+
+```javascript
+import TempApi from 'temp_api';
+
+let apiInstance = new TempApi.TaskApi();
+let attribute = "attribute_example"; // String | the attribute based on which the search is performed
+let value = "value_example"; // String | the value parameter based on which the search is performed
+apiInstance.getByParamstask(attribute, value, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **attribute** | **String**| the attribute based on which the search is performed | 
+ **value** | **String**| the value parameter based on which the search is performed | 
 
 ### Return type
 

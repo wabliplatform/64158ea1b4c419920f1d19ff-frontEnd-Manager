@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**createemployee**](EmployeeApi.md#createemployee) | **POST** /employee | Creates the data
 [**deleteemployee**](EmployeeApi.md#deleteemployee) | **DELETE** /employee/{employeeId} | Delete the element
 [**getAllemployee**](EmployeeApi.md#getAllemployee) | **GET** /employee/getAll | Get all the data
+[**getByParamsemployee**](EmployeeApi.md#getByParamsemployee) | **GET** /employee/getByParams/{attribute}/{value} | Get all the data based on user query
 [**getemployee**](EmployeeApi.md#getemployee) | **GET** /employee/{employeeId} | Get the element
 [**updateemployee**](EmployeeApi.md#updateemployee) | **PUT** /employee/{employeeId} | Updates the element
 
@@ -122,6 +123,51 @@ apiInstance.getAllemployee((error, data, response) => {
 ### Parameters
 
 This endpoint does not need any parameter.
+
+### Return type
+
+[**[Employee]**](Employee.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getByParamsemployee
+
+> [Employee] getByParamsemployee(attribute, value)
+
+Get all the data based on user query
+
+### Example
+
+```javascript
+import TempApi from 'temp_api';
+
+let apiInstance = new TempApi.EmployeeApi();
+let attribute = "attribute_example"; // String | the attribute based on which the search is performed
+let value = "value_example"; // String | the value parameter based on which the search is performed
+apiInstance.getByParamsemployee(attribute, value, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **attribute** | **String**| the attribute based on which the search is performed | 
+ **value** | **String**| the value parameter based on which the search is performed | 
 
 ### Return type
 

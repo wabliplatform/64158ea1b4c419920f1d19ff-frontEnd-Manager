@@ -42,6 +42,20 @@
     "functionNextTemplate":"/**nextFunction*/",
     "apiCallPromisified":"apiTaskApi.getAlltask((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
   },{
+    "methodType":"GETBYPARAMS",
+    "methodName":"getByParamstask",
+    "returnType":{
+      "primitive":false,
+      "jsType":"Array",
+      "modelName":"[Task]"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiTaskApi = new TempApi.TaskApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiTaskApi.getByParamstask( attribute,  value, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  },{
     "methodType":"GET",
     "methodName":"gettask",
     "returnType":{

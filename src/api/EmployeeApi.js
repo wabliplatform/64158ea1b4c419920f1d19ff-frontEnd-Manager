@@ -153,6 +153,54 @@ export default class EmployeeApi {
     }
 
     /**
+     * Callback function to receive the result of the getByParamsemployee operation.
+     * @callback module:api/EmployeeApi~getByParamsemployeeCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/Employee>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get all the data based on user query
+     * @param {String} attribute the attribute based on which the search is performed
+     * @param {String} value the value parameter based on which the search is performed
+     * @param {module:api/EmployeeApi~getByParamsemployeeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/Employee>}
+     */
+    getByParamsemployee(attribute, value, callback) {
+      let postBody = null;
+      // verify the required parameter 'attribute' is set
+      if (attribute === undefined || attribute === null) {
+        throw new Error("Missing the required parameter 'attribute' when calling getByParamsemployee");
+      }
+      // verify the required parameter 'value' is set
+      if (value === undefined || value === null) {
+        throw new Error("Missing the required parameter 'value' when calling getByParamsemployee");
+      }
+
+      let pathParams = {
+        'attribute': attribute,
+        'value': value
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [Employee];
+      return this.apiClient.callApi(
+        '/employee/getByParams/{attribute}/{value}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getemployee operation.
      * @callback module:api/EmployeeApi~getemployeeCallback
      * @param {String} error Error message, if any.

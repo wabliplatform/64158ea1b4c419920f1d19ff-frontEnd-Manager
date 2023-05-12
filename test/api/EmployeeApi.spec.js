@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('getByParamsemployee', function() {
+      it('should call getByParamsemployee successfully', function(done) {
+        //uncomment below and update the code to test getByParamsemployee
+        //instance.getByParamsemployee(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getemployee', function() {
       it('should call getemployee successfully', function(done) {
         //uncomment below and update the code to test getemployee
