@@ -162,27 +162,21 @@ export default class TaskApi {
 
     /**
      * Get all the data based on user query
-     * @param {String} attribute the attribute based on which the search is performed
-     * @param {String} value the value parameter based on which the search is performed
+     * @param {String} filter the query based on which the search is performed
      * @param {module:api/TaskApi~getByParamstaskCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Task>}
      */
-    getByParamstask(attribute, value, callback) {
+    getByParamstask(filter, callback) {
       let postBody = null;
-      // verify the required parameter 'attribute' is set
-      if (attribute === undefined || attribute === null) {
-        throw new Error("Missing the required parameter 'attribute' when calling getByParamstask");
-      }
-      // verify the required parameter 'value' is set
-      if (value === undefined || value === null) {
-        throw new Error("Missing the required parameter 'value' when calling getByParamstask");
+      // verify the required parameter 'filter' is set
+      if (filter === undefined || filter === null) {
+        throw new Error("Missing the required parameter 'filter' when calling getByParamstask");
       }
 
       let pathParams = {
-        'attribute': attribute,
-        'value': value
       };
       let queryParams = {
+        'filter': filter
       };
       let headerParams = {
       };
@@ -194,7 +188,7 @@ export default class TaskApi {
       let accepts = ['application/json'];
       let returnType = [Task];
       return this.apiClient.callApi(
-        '/task/getByParams/{attribute}/{value}', 'GET',
+        '/task/getByParams', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

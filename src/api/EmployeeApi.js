@@ -162,27 +162,21 @@ export default class EmployeeApi {
 
     /**
      * Get all the data based on user query
-     * @param {String} attribute the attribute based on which the search is performed
-     * @param {String} value the value parameter based on which the search is performed
+     * @param {String} filter the query based on which the search is performed
      * @param {module:api/EmployeeApi~getByParamsemployeeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Employee>}
      */
-    getByParamsemployee(attribute, value, callback) {
+    getByParamsemployee(filter, callback) {
       let postBody = null;
-      // verify the required parameter 'attribute' is set
-      if (attribute === undefined || attribute === null) {
-        throw new Error("Missing the required parameter 'attribute' when calling getByParamsemployee");
-      }
-      // verify the required parameter 'value' is set
-      if (value === undefined || value === null) {
-        throw new Error("Missing the required parameter 'value' when calling getByParamsemployee");
+      // verify the required parameter 'filter' is set
+      if (filter === undefined || filter === null) {
+        throw new Error("Missing the required parameter 'filter' when calling getByParamsemployee");
       }
 
       let pathParams = {
-        'attribute': attribute,
-        'value': value
       };
       let queryParams = {
+        'filter': filter
       };
       let headerParams = {
       };
@@ -194,7 +188,7 @@ export default class EmployeeApi {
       let accepts = ['application/json'];
       let returnType = [Employee];
       return this.apiClient.callApi(
-        '/employee/getByParams/{attribute}/{value}', 'GET',
+        '/employee/getByParams', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

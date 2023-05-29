@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**createtask**](TaskApi.md#createtask) | **POST** /task | Creates the data
 [**deletetask**](TaskApi.md#deletetask) | **DELETE** /task/{taskId} | Delete the element
 [**getAlltask**](TaskApi.md#getAlltask) | **GET** /task/getAll | Get all the data
-[**getByParamstask**](TaskApi.md#getByParamstask) | **GET** /task/getByParams/{attribute}/{value} | Get all the data based on user query
+[**getByParamstask**](TaskApi.md#getByParamstask) | **GET** /task/getByParams | Get all the data based on user query
 [**gettask**](TaskApi.md#gettask) | **GET** /task/{taskId} | Get the element
 [**updatetask**](TaskApi.md#updatetask) | **PUT** /task/{taskId} | Updates the element
 
@@ -140,7 +140,7 @@ No authorization required
 
 ## getByParamstask
 
-> [Task] getByParamstask(attribute, value)
+> [Task] getByParamstask(filter)
 
 Get all the data based on user query
 
@@ -150,9 +150,8 @@ Get all the data based on user query
 import TempApi from 'temp_api';
 
 let apiInstance = new TempApi.TaskApi();
-let attribute = "attribute_example"; // String | the attribute based on which the search is performed
-let value = "value_example"; // String | the value parameter based on which the search is performed
-apiInstance.getByParamstask(attribute, value, (error, data, response) => {
+let filter = "filter_example"; // String | the query based on which the search is performed
+apiInstance.getByParamstask(filter, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -166,8 +165,7 @@ apiInstance.getByParamstask(attribute, value, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attribute** | **String**| the attribute based on which the search is performed | 
- **value** | **String**| the value parameter based on which the search is performed | 
+ **filter** | **String**| the query based on which the search is performed | 
 
 ### Return type
 

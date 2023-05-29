@@ -54,7 +54,7 @@
     "importModelParameter":[],
     "modelNames":[],
     "functionNextTemplate":"/**nextFunction*/",
-    "apiCallPromisified":"apiTaskApi.getByParamstask( attribute,  value, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+    "apiCallPromisified":"apiTaskApi.getByParamstask( filter, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
   },{
     "methodType":"GET",
     "methodName":"gettask",

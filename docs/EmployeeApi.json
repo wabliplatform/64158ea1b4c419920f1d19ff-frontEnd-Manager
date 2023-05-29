@@ -54,7 +54,7 @@
     "importModelParameter":[],
     "modelNames":[],
     "functionNextTemplate":"/**nextFunction*/",
-    "apiCallPromisified":"apiEmployeeApi.getByParamsemployee( attribute,  value, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+    "apiCallPromisified":"apiEmployeeApi.getByParamsemployee( filter, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
   },{
     "methodType":"GET",
     "methodName":"getemployee",

@@ -291,8 +291,7 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
           parentId = key;
         }
       });
-     location.href= '/updateTask/' + transitionId;}};window.onload = () => {const attributetodoTasks = "taskStatus"; 
-            const valuetodoTasks = "Todo";apiTaskApi.getByParamstask( attributetodoTasks,  valuetodoTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("icfzop").querySelectorAll( "[dataitem='true']" )].filter(
+     location.href= '/updateTask/' + transitionId;}};window.onload = () => {const filtertodoTasks = {taskStatus: { $eq: "Todo"}}; apiTaskApi.getByParamstask( filtertodoTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("icfzop").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();  data.forEach((item,i) => {
@@ -359,8 +358,7 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
     );
     
     
-    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});const attributeinProgressTasks = "taskStatus"; 
-            const valueinProgressTasks = "Inprogress";apiTaskApi.getByParamstask( attributeinProgressTasks,  valueinProgressTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("ip2r4v").querySelectorAll( "[dataitem='true']" )].filter(
+    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});const filterinProgressTasks = {taskStatus: { $eq: "Inprogress"}}; apiTaskApi.getByParamstask( filterinProgressTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("ip2r4v").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();  data.forEach((item,i) => {
@@ -427,8 +425,7 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
     );
     
     
-    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});const attributedoneTasks = "taskStatus"; 
-            const valuedoneTasks = "Done";apiTaskApi.getByParamstask( attributedoneTasks,  valuedoneTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i3bnj").querySelectorAll( "[dataitem='true']" )].filter(
+    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});const filterdoneTasks = {taskStatus: { $eq: "Done"}}; apiTaskApi.getByParamstask( filterdoneTasks, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i3bnj").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();  data.forEach((item,i) => {

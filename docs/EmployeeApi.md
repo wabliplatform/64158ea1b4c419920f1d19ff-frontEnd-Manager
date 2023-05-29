@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**createemployee**](EmployeeApi.md#createemployee) | **POST** /employee | Creates the data
 [**deleteemployee**](EmployeeApi.md#deleteemployee) | **DELETE** /employee/{employeeId} | Delete the element
 [**getAllemployee**](EmployeeApi.md#getAllemployee) | **GET** /employee/getAll | Get all the data
-[**getByParamsemployee**](EmployeeApi.md#getByParamsemployee) | **GET** /employee/getByParams/{attribute}/{value} | Get all the data based on user query
+[**getByParamsemployee**](EmployeeApi.md#getByParamsemployee) | **GET** /employee/getByParams | Get all the data based on user query
 [**getemployee**](EmployeeApi.md#getemployee) | **GET** /employee/{employeeId} | Get the element
 [**updateemployee**](EmployeeApi.md#updateemployee) | **PUT** /employee/{employeeId} | Updates the element
 
@@ -140,7 +140,7 @@ No authorization required
 
 ## getByParamsemployee
 
-> [Employee] getByParamsemployee(attribute, value)
+> [Employee] getByParamsemployee(filter)
 
 Get all the data based on user query
 
@@ -150,9 +150,8 @@ Get all the data based on user query
 import TempApi from 'temp_api';
 
 let apiInstance = new TempApi.EmployeeApi();
-let attribute = "attribute_example"; // String | the attribute based on which the search is performed
-let value = "value_example"; // String | the value parameter based on which the search is performed
-apiInstance.getByParamsemployee(attribute, value, (error, data, response) => {
+let filter = "filter_example"; // String | the query based on which the search is performed
+apiInstance.getByParamsemployee(filter, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -166,8 +165,7 @@ apiInstance.getByParamsemployee(attribute, value, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attribute** | **String**| the attribute based on which the search is performed | 
- **value** | **String**| the value parameter based on which the search is performed | 
+ **filter** | **String**| the query based on which the search is performed | 
 
 ### Return type
 
