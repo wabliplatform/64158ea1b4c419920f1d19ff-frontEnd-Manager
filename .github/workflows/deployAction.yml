@@ -14,6 +14,6 @@ jobs:
           password: ${{ secrets.WABLI_SERVER_SSH_PASSWORD }}
           port: ${{ secrets.WABLI_SERVER_SSH_PORT }}
           script: >-
-            ./wabli-applications/deploy.sh -b main -d wabli-deploy-test -r
+            ./wabli-applications/deploy.sh -b main -d wabli-bme-1 -r
             https://github.com/wabliplatform/64158ea1b4c419920f1d19ff-frontEnd-Manager.git
-            -f 64158ea1b4c419920f1d19ff-frontEnd-Manager -p 4808
+            -f 64158ea1b4c419920f1d19ff-frontEnd-Manager -p 4101

@@ -1,6 +1,6 @@
 # TempApi.EmployeeApi
 
-All URIs are relative to *https://83.212.100.226:4008/v1*
+All URIs are relative to *https://83.212.100.226:4001/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
